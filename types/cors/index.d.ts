@@ -5,7 +5,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import { IncomingHttpHeaders } from 'http';
+import { HttpHeaders } from '@angular/common/http';
 
 type StaticOrigin = boolean | string | RegExp | (boolean | string | RegExp)[];
 
@@ -14,7 +14,7 @@ type CustomOrigin = (requestOrigin: string | undefined, callback: (err: Error | 
 declare namespace e {
     interface CorsRequest {
         method?: string | undefined;
-        headers: IncomingHttpHeaders;
+        headers: HttpHeaders;
     }
     interface CorsOptions {
         /**
